@@ -1,0 +1,15 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(to right, #010f37, #020e30, #030c29, #030a21, #02081a);
+   
+}
+
+img {
+    margin-top: 10px;
+    margin-left: 36%;
+    border-radius: 10px;
+    
+}
+
+/* Seção dos cards */
