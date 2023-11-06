@@ -1,0 +1,101 @@
+/* Seção dos cards */
+.cards {
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cards-quiz:hover {
+    filter: none;
+}
+
+.cards-quiz {
+    height: 350px;
+    width: 25%;
+    border-radius: 20px;
+    cursor: pointer;
+
+    filter: grayscale()
+}
+
+#card-1 {
+    background-image: url(https://www.superti360.com.br/wp-content/uploads/2022/02/0-destaque-linguagens-de-programacao-2019.jpg);
+    background-position: center;
+}
+
+#card-2 {
+    background-image: url(https://blog.unipar.br/wp-content/uploads/2021/02/post_thumbnail-2f0ab3332b81922f1c248428477ec54a-445x445.jpg);
+    background-position: center;
+}
+
+#card-3 {
+    background-image: url(https://static.preparaenem.com/2023/01/esquema-ilustrativo-traz-itens-atribuidos-aos-estudos-da-matematica-como-calculadora-regua-compasso-etc.jpg);
+    background-position: center;
+}
+
+#card-4 {
+    background-image: url(https://static.preparaenem.com/2023/01/esquema-ilustrativo-traz-itens-atribuidos-aos-estudos-da-matematica-como-calculadora-regua-compasso-etc.jpg);
+    background-position: center;
+}
+
+#card-5 {
+    background-image: url(https://static.preparaenem.com/2023/01/esquema-ilustrativo-traz-itens-atribuidos-aos-estudos-da-matematica-como-calculadora-regua-compasso-etc.jpg);
+    background-position: center;
+}
+
+#card-6 {
+    background-image: url(https://static.preparaenem.com/2023/01/esquema-ilustrativo-traz-itens-atribuidos-aos-estudos-da-matematica-como-calculadora-regua-compasso-etc.jpg);
+    background-position: center;
+}
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    height: 350px;
+    width: 25%;
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Gira o card */
+ .flip {
+    transform: rotateY(180deg);
+}
+
+/* Posição do card de frente e verso */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Verso do card */
+.flip-card-back {
+    background-color: #0d1c4a;
+    color: white;
+    border-radius: 20px;
+    transform: rotateY(180deg);
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+

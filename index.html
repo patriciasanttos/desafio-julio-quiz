@@ -5,21 +5,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/inicio.css">
-    <link rel="shortcut icon" href="/Imagens/img-header.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/card.css">
+    <link rel="shortcut icon" href="./Imagens/img-header.svg" type="image/x-icon">
     <title>Quiz</title>
 
 </head>
 
 <body>
     <header>
-        <img id="quiz" src="/Imagens/img-header.png" width="400px" alt="">
+        <img id="quiz" src="./Imagens/img-header.png" width="400px" alt="">
     </header>
 
-    <section>
-        <div id="card-1">
+    <section class="cards">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div id="card-1" class="flip-card-front cards-quiz">
+        
+                </div>
+                <div class="flip-card-back">
+                    <h1>Quiz sobre programação</h1>
+                    <p>Neste quiz vamos fazer perguntas sobre o mundo da programação</p>
+                    <button class="iniciar">Iniciar</button>
+                </div>
+            </div>
+        </div>
 
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div id="card-2" class="flip-card-front cards-quiz">
+        
+                </div>
+                <div class="flip-card-back">
+                    <h1>2</h1>
+        
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div id="card-3" class="flip-card-front cards-quiz">
+        
+                </div>
+                <div class="flip-card-back">
+                    <h1>3</h1>
+        
+                </div>
+            </div>
         </div>
     </section>
+
+    <section class="cards">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div id="card-4" class="flip-card-front cards-quiz">
+    
+                </div>
+                <div class="flip-card-back">
+                    <h1>4</h1>
+    
+                </div>
+            </div>
+        </div>
+    
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div id="card-5" class="flip-card-front cards-quiz">
+    
+                </div>
+                <div class="flip-card-back">
+                    <h1>5</h1>
+    
+                </div>
+            </div>
+        </div>
+    
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div id="card-6" class="flip-card-front cards-quiz">
+    
+                </div>
+                <div class="flip-card-back">
+                    <h1>6</h1>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+    <script src="./scripts/cards.js"></script>
 </body>
 
 </html>
