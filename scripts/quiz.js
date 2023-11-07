@@ -1,4 +1,5 @@
 let respondida = false
+let perguntaAtual = 0
 
 function mostrarResultados() {
   // Limpa a div do quadro-quiz
