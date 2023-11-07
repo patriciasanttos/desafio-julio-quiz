@@ -20,9 +20,6 @@
     border: 2px solid #12245b;
     border-radius: 20px;
     color: white;
-
-    width: 40%;
-    height: 550px;
 }
 
 #pergunta {
@@ -70,7 +67,7 @@
 }
 
 .selecionada {
-    background-color: #0d1c4a;  
+    background-color: #0d1c4a;
 }
 
 .alternativaIncorreta {
@@ -81,4 +78,36 @@
     background-color: rgb(6, 87, 6);
 }
 
+.respondida {
+    cursor: auto;
+}
 
+ul {
+    list-style-type: none;
+}
+
+li.correta {
+    background-color: rgb(6, 87, 6);
+}
+
+li.errada {
+    background-color: rgb(205, 55, 55);
+}
+
+@media only screen and (max-width: 600px) {
+    #quadro-quiz { width: 90%; }
+    #pergunta { font-size: 16pt; }
+    h2 { font-size: 14pt; }
+}
+@media only screen and (min-width: 600px) {
+    #quadro-quiz { width: 80%; }
+}
+@media only screen and (min-width: 768px) {
+    #quadro-quiz { width: 80%; }
+}
+@media only screen and (min-width: 992px) {
+    #quadro-quiz { width: 60%; }
+}
+@media only screen and (min-width: 1200px) {
+    #quadro-quiz { width: 40%; }
+}
