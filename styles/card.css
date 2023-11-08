@@ -73,7 +73,7 @@
 }
 
 /* Gira o card */
- .flip {
+.flip {
     transform: rotateY(180deg);
 }
 
@@ -117,4 +117,19 @@
 
 .iniciar:hover {
     transform: scale(1.2);
+}
+
+@media (min-width: 200px) and (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .cards-quiz {
+        width: 100%;
+    }
+
+    .flip-card {
+        margin-bottom: 80px;
+        width: 100%;
+    }
 }
