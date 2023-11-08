@@ -11,23 +11,6 @@
     margin-bottom: 20px;
 }
 
-.iniciar {
-    padding: 10px;
-    background-color: #20346f;
-    border: 0px;
-    border-radius: 10px;
-}
-
-.iniciar a {
-    color: white;
-    font-size: 14pt;
-    text-decoration-line: none;
-}
-
-.iniciar:hover {
-    transform: scale(1.2);
-}
-
 .cards-quiz:hover {
     filter: none;
 }
@@ -119,3 +102,19 @@
     justify-content: space-around;
 }
 
+.iniciar {
+    padding: 10px;
+    background-color: #20346f;
+    border: 0px;
+    border-radius: 10px;
+}
+
+.iniciar a {
+    color: white;
+    font-size: 14pt;
+    text-decoration-line: none;
+}
+
+.iniciar:hover {
+    transform: scale(1.2);
+}
