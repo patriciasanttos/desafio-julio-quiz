@@ -101,19 +101,39 @@ li.errada {
 }
 
 @media only screen and (max-width: 600px) {
-    #quadro-quiz { width: 90%; }
-    #pergunta { font-size: 16pt; }
-    h2 { font-size: 14pt; }
+    #quadro-quiz {
+        width: 90%;
+    }
+
+    #pergunta {
+        font-size: 16pt;
+    }
+
+    h2 {
+        font-size: 14pt;
+    }
 }
+
 @media only screen and (min-width: 600px) {
-    #quadro-quiz { width: 80%; }
+    #quadro-quiz {
+        width: 80%;
+    }
 }
+
 @media only screen and (min-width: 768px) {
-    #quadro-quiz { width: 80%; }
+    #quadro-quiz {
+        width: 80%;
+    }
 }
+
 @media only screen and (min-width: 992px) {
-    #quadro-quiz { width: 60%; }
+    #quadro-quiz {
+        width: 60%;
+    }
 }
+
 @media only screen and (min-width: 1200px) {
-    #quadro-quiz { width: 40%; }
+    #quadro-quiz {
+        width: 40%;
+    }
 }

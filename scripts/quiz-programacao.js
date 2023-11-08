@@ -1,14 +1,14 @@
-let respondida = false
-let perguntaAtual = 0
+let respondida = false;
+let perguntaAtual = 0;
 
 function mostrarResultados() {
   // Limpa a div do quadro-quiz
   let quadroQuiz = document.getElementById("quadro-quiz");
-  quadroQuiz.innerHTML = '';
+  quadroQuiz.innerHTML = "";
 
   // Titulo
   let h2 = document.createElement("h2");
-  h2.textContent = 'Resultado';
+  h2.textContent = "Resultado";
   quadroQuiz.appendChild(h2);
 
   for (let i = 0; i < perguntas.length; i++) {
@@ -17,10 +17,10 @@ function mostrarResultados() {
     let div = document.createElement("div");
     let ul = document.createElement("ul");
 
-    let h3 = document.createElement('h3');
-    h3.textContent = pergunta.questao
+    let h3 = document.createElement("h3");
+    h3.textContent = pergunta.questao;
 
-    div.appendChild(h3)
+    div.appendChild(h3);
 
     for (let j = 0; j < pergunta.alternativas.length; j++) {
       const alternativa = pergunta.alternativas[j];
@@ -28,59 +28,61 @@ function mostrarResultados() {
       let li = document.createElement("li");
       li.textContent = alternativa;
 
-      let classes = ''
+      let classes = "";
       if (j === pergunta.alternativaSelecionada) {
-        classes += ' selecionada'
+        classes += " selecionada";
 
         if (pergunta.alternativaCorreta == pergunta.alternativaSelecionada) {
-          classes += ' correta'
+          classes += " correta";
         } else {
-          classes += ' errada'
+          classes += " errada";
         }
       } else {
-        if (j === pergunta.alternativaCorreta && j != pergunta.alternativaSelecionada) {
-          classes += ' correta'
-        } 
+        if (
+          j === pergunta.alternativaCorreta &&
+          j != pergunta.alternativaSelecionada
+        ) {
+          classes += " correta";
+        }
       }
 
-      li.setAttribute('class', classes)
-      ul.appendChild(li)
+      li.setAttribute("class", classes);
+      ul.appendChild(li);
     }
-    div.appendChild(ul)
+    div.appendChild(ul);
 
-    quadroQuiz.appendChild(div)
+    quadroQuiz.appendChild(div);
   }
 
-  
   let divResposta = document.createElement("div");
   divResposta.setAttribute("id", "resposta");
 
   let button = document.createElement("button");
   button.setAttribute("id", "responder");
-  button.addEventListener("click", () => window.location = '/');
+  button.addEventListener("click", () => (window.location = "/"));
   button.textContent = "Voltar";
 
-  divResposta.appendChild(button)
-  quadroQuiz.appendChild(divResposta)
+  divResposta.appendChild(button);
+  quadroQuiz.appendChild(divResposta);
 }
 
 function onClickProximo() {
   // Vai pra próxima pergunta e verifica se já chegou na última
-  perguntaAtual++
-  respondida = false
+  perguntaAtual++;
+  respondida = false;
 
   if (perguntaAtual < perguntas.length) {
     perguntasNoHtml(perguntaAtual);
   } else {
-    mostrarResultados()
+    mostrarResultados();
   }
 }
 
 function onClickResponder(numeroQuestao) {
-  respondida = true
+  respondida = true;
 
   let alternativas = document.getElementsByClassName("alternativas");
-  let questao = perguntas[numeroQuestao]
+  let questao = perguntas[numeroQuestao];
 
   if (questao.alternativaCorreta != questao.alternativaSelecionada) {
     alternativas[questao.alternativaSelecionada].setAttribute(
@@ -107,21 +109,21 @@ function onClickResponder(numeroQuestao) {
   }
 
   // Omitir botão responser e criar o botão "próximo"
-  document.getElementById("responder").remove()
+  document.getElementById("responder").remove();
 
   let button = document.createElement("button");
   button.setAttribute("id", "responder");
   button.addEventListener("click", () => onClickProximo(numeroQuestao));
   button.textContent = "Próximo";
 
-  document.getElementById("resposta").appendChild(button)
+  document.getElementById("resposta").appendChild(button);
 }
 
 function onClickAlternativa(numeroQuestao, numeroAlternativa) {
   if (!respondida) {
     perguntas[numeroQuestao].alternativaSelecionada = numeroAlternativa;
     document.getElementById("responder").removeAttribute("disabled");
-  
+
     let alternativas = document.getElementsByClassName("alternativas");
     for (let i = 0; i < alternativas.length; i++) {
       alternativas[i].setAttribute("class", "alternativas");
@@ -134,7 +136,7 @@ function onClickAlternativa(numeroQuestao, numeroAlternativa) {
 function perguntasNoHtml(numeroQuestao) {
   // Limpa a div do quadro-quiz
   let quadroQuiz = document.getElementById("quadro-quiz");
-  quadroQuiz.innerHTML = '';
+  quadroQuiz.innerHTML = "";
 
   // Titulo da questão
   let h2 = document.createElement("h2");

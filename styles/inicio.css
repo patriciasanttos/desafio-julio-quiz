@@ -9,3 +9,9 @@ header {
     margin-top: 10px;
     border-radius: 10px;
 }
+
+@media (min-width: 200px) and (max-width: 768px) {
+    #quiz {
+        width: 90%;
+    }
+}
