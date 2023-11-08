@@ -6,6 +6,28 @@
     justify-content: space-around;
 }
 
+#titulo-card {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.iniciar {
+    padding: 10px;
+    background-color: #20346f;
+    border: 0px;
+    border-radius: 10px;
+}
+
+.iniciar a {
+    color: white;
+    font-size: 14pt;
+    text-decoration-line: none;
+}
+
+.iniciar:hover {
+    transform: scale(1.2);
+}
+
 .cards-quiz:hover {
     filter: none;
 }
@@ -35,31 +57,29 @@
 }
 
 #card-4 {
-    background-image: url(https://static.preparaenem.com/2023/01/esquema-ilustrativo-traz-itens-atribuidos-aos-estudos-da-matematica-como-calculadora-regua-compasso-etc.jpg);
+    background-image: url(https://t.ctcdn.com.br/7cu19lIQFK79hVUrJov6yLC8R6A=/84x0:1270x668/640x360/smart/i347608.jpeg);
     background-position: center;
 }
 
 #card-5 {
-    background-image: url(https://static.preparaenem.com/2023/01/esquema-ilustrativo-traz-itens-atribuidos-aos-estudos-da-matematica-como-calculadora-regua-compasso-etc.jpg);
+    background-image: url(https://www.insper.edu.br/wp-content/uploads/2022/08/Pipoca-shutterstock_1019332333.jpg);
     background-position: center;
 }
 
 #card-6 {
-    background-image: url(https://static.preparaenem.com/2023/01/esquema-ilustrativo-traz-itens-atribuidos-aos-estudos-da-matematica-como-calculadora-regua-compasso-etc.jpg);
+    background-image: url(https://img.quizur.com/f/img5bf6b0352bfc10.16620550.jpg?lastEdited=1542893688);
     background-position: center;
 }
 
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
     background-color: transparent;
     height: 350px;
     width: 25%;
     perspective: 1000px;
-    /* Remove this if you don't want the 3D effect */
+    /* Remover caso não queira o efeito 3d */
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
     position: relative;
     width: 100%;
