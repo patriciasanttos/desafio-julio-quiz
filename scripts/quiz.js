@@ -103,6 +103,9 @@ function onClickResponder(numeroQuestao) {
       "class",
       "alternativas alternativaCorreta animate__animated animate__flash"
     );
+    
+    let quadroQuiz = document.getElementById("quadro-quiz");
+    quadroQuiz.setAttribute('class', 'animate__animated animate__headShake')
 
     let audio = new Audio('/sounds/error.mp3');
     audio.volume = 0.2
