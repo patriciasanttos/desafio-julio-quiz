@@ -6,6 +6,8 @@ function mostrarResultados() {
   let quadroQuiz = document.getElementById("quadro-quiz");
   quadroQuiz.innerHTML = "";
 
+  quadroQuiz.setAttribute('class', 'animate__animated animate__backInUp')
+
   // Titulo
   let h2 = document.createElement("h2");
   h2.textContent = "Resultado";
@@ -70,12 +72,19 @@ function onClickProximo() {
   // Vai pra próxima pergunta e verifica se já chegou na última
   perguntaAtual++;
   respondida = false;
+  
+  let quadroQuiz = document.getElementById("quadro-quiz");
+  quadroQuiz.setAttribute('class', 'animate__animated animate__fadeOutLeft')
 
-  if (perguntaAtual < perguntas.length) {
-    perguntasNoHtml(perguntaAtual);
-  } else {
-    mostrarResultados();
-  }
+  setTimeout(() => {
+    if (perguntaAtual < perguntas.length) {
+      perguntasNoHtml(perguntaAtual);
+    } else {
+      mostrarResultados();
+    }
+  }, 400)
+
+ 
 }
 
 function onClickResponder(numeroQuestao) {
@@ -83,21 +92,29 @@ function onClickResponder(numeroQuestao) {
 
   let alternativas = document.getElementsByClassName("alternativas");
   let questao = perguntas[numeroQuestao];
+  let acertou = questao.alternativaCorreta == questao.alternativaSelecionada
 
-  if (questao.alternativaCorreta != questao.alternativaSelecionada) {
+  if (!acertou) {
     alternativas[questao.alternativaSelecionada].setAttribute(
       "class",
       "alternativas alternativaIncorreta"
     );
     alternativas[perguntas[numeroQuestao].alternativaCorreta].setAttribute(
       "class",
-      "alternativas alternativaCorreta"
+      "alternativas alternativaCorreta animate__animated animate__flash"
     );
+
+    let audio = new Audio('/sounds/error.mp3');
+    audio.volume = 0.2
+    audio.play(); 
   } else {
     alternativas[perguntas[numeroQuestao].alternativaCorreta].setAttribute(
       "class",
-      "alternativas alternativaCorreta"
+      "alternativas alternativaCorreta animate__animated animate__flash"
     );
+    let audio = new Audio('/sounds/correct.mp3');
+    audio.volume = 0.3
+    audio.play(); 
   }
 
   // Coloca classe "respondida" (trava as alternativas)
@@ -176,6 +193,8 @@ function perguntasNoHtml(numeroQuestao) {
 
   divResposta.appendChild(button);
   quadroQuiz.appendChild(divResposta);
+
+  quadroQuiz.setAttribute('class', 'animate__animated animate__fadeInRight')
 }
 
 // Começar mostrando a primeira pergunta (perguntaAtual: 0)
