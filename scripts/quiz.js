@@ -18,9 +18,10 @@ function mostrarResultados() {
 
     let div = document.createElement("div");
     let ul = document.createElement("ul");
+    let acertou = pergunta.alternativaCorreta == pergunta.alternativaSelecionada
 
     let h3 = document.createElement("h3");
-    h3.textContent = pergunta.questao;
+    h3.textContent = (acertou ? `✅ ` : `❌ `) + pergunta.questao;
 
     div.appendChild(h3);
 
@@ -34,7 +35,7 @@ function mostrarResultados() {
       if (j === pergunta.alternativaSelecionada) {
         classes += " selecionada";
 
-        if (pergunta.alternativaCorreta == pergunta.alternativaSelecionada) {
+        if (acertou) {
           classes += " correta";
         } else {
           classes += " errada";
@@ -103,6 +104,9 @@ function onClickResponder(numeroQuestao) {
       "class",
       "alternativas alternativaCorreta animate__animated animate__flash"
     );
+    
+    let quadroQuiz = document.getElementById("quadro-quiz");
+    quadroQuiz.setAttribute('class', 'animate__animated animate__headShake')
 
     let audio = new Audio('/sounds/error.mp3');
     audio.volume = 0.2
