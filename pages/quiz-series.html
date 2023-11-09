@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Imagens/img-header.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+
+    <title>Quiz</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="voltar"> <a href="/index.html">👈 Voltar</a></h1>
+    </header>
+
+    <section id="quiz">
+        <h1>Quiz de Séries</h1>
+        <div id="quadro-quiz"></div>
+    </section>
+
+    <script>
+        let perguntas = [
+            {
+                questao:
+                    "Qual série se passa no fictício condado de Westeros?",
+                alternativas: ["A: The Walking Dead", "B: Stranger Things", "C: Breaking Bad", "D: Game of Thrones"],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+            {
+                questao: 'Qual série de comédia segue a vida de seis amigos em Nova York?',
+                alternativas: [
+                    "A: Friends",
+                    "B: How I Met Your Mother",
+                    "C: The Office",
+                    "D: Parks and Recreation",
+                ],
+                alternativaCorreta: 0,
+                alternativaSelecionada: null
+            },
+            {
+                questao: 'Qual série se passa em uma prisão de segurança máxima?',
+                alternativas: [
+                    "A: Orange is the New Black",
+                    "B: Prison Break",
+                    "C: Wentworth",
+                    "D: Oz",
+                ],
+                alternativaCorreta: 1,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    "Qual série é sobre um grupo de crianças que enfrentam forças sobrenaturais em sua cidade?",
+                alternativas: [
+                    "A: The Haunting of Hill House",
+                    "B: Sabrina, a Aprendiz de Feiticeira",
+                    "C: A Maldição da Residência Hill",
+                    "D: Stranger Things",
+                ],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    "Qual série de comédia é centrada em um grupo de funcionários de uma empresa de papel?",
+                alternativas: ["A: The Office", "B: Superstore", "C: The IT Crowd", "D: Brooklyn Nine-Nine"],
+                alternativaCorreta: 0,
+                alternativaSelecionada: null
+            },
+              {
+                questao:
+                    "Qual é o nome da série que se passa em um parque temático habitado por anfitriões robóticos?",
+                alternativas: ["A: Black Mirror", "B: Westworld", "C: The Expanse", "D: Altered Carbon"],
+                alternativaCorreta: 1,
+                alternativaSelecionada: null
+            },
+              {
+                questao:
+                    "Em que série os personagens principais são agentes do FBI que investigam atividades paranormais?",
+                alternativas: ["A: The X-Files", "B: Supernatural", "C: Fringe", "D: Lost"],
+                alternativaCorreta: 0,
+                alternativaSelecionada: null
+            },
+              {
+                questao:
+                    "Qual série segue a história de um cientista e seu assistente que viajam pelo tempo e espaço em uma cabine telefônica?",
+                alternativas: ["A: The Hitchhiker's Guide to the Galaxy", "B: Quantum Leap", "C: Stargate SG-1", "D: Doctor Who"],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+              {
+                questao:
+                    "Em qual série os sobreviventes de um acidente de avião ficam presos em uma ilha misteriosa?",
+                alternativas: ["A: Survivor", "B: Cast Away", "C: Lost", "D: The 100"],
+                alternativaCorreta: 2,
+                alternativaSelecionada: null
+            },
+              {
+                questao:
+                    "Em qual série de drama criminal um analista de sangue trabalha com a polícia para resolver assassinatos em série?",
+                alternativas: ["A: The Killing", "B: Dexter", "C: Criminal Minds", "D: Hannibal"],
+                alternativaCorreta: 1,
+                alternativaSelecionada: null
+            },
+        ];
+    </script>
+    <script src="/scripts/quiz.js"></script>
+</body>
+
+</html>

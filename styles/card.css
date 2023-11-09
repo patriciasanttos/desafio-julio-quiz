@@ -1,0 +1,135 @@
+/* Seção dos cards */
+.cards {
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#titulo-card {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.cards-quiz:hover {
+    filter: none;
+}
+
+.cards-quiz {
+    height: 350px;
+    width: 25%;
+    border-radius: 20px;
+    cursor: pointer;
+
+    filter: grayscale()
+}
+
+#card-1 {
+    background-image: url(https://www.superti360.com.br/wp-content/uploads/2022/02/0-destaque-linguagens-de-programacao-2019.jpg);
+    background-position: center;
+}
+
+#card-2 {
+    background-image: url(https://blog.unipar.br/wp-content/uploads/2021/02/post_thumbnail-2f0ab3332b81922f1c248428477ec54a-445x445.jpg);
+    background-position: center;
+}
+
+#card-3 {
+    background-image: url(https://static.preparaenem.com/2023/01/esquema-ilustrativo-traz-itens-atribuidos-aos-estudos-da-matematica-como-calculadora-regua-compasso-etc.jpg);
+    background-position: center;
+}
+
+#card-4 {
+    background-image: url(https://t.ctcdn.com.br/7cu19lIQFK79hVUrJov6yLC8R6A=/84x0:1270x668/640x360/smart/i347608.jpeg);
+    background-position: center;
+}
+
+#card-5 {
+    background-image: url(https://www.insper.edu.br/wp-content/uploads/2022/08/Pipoca-shutterstock_1019332333.jpg);
+    background-position: center;
+}
+
+#card-6 {
+    background-image: url(https://img.quizur.com/f/img5bf6b0352bfc10.16620550.jpg?lastEdited=1542893688);
+    background-position: center;
+}
+
+
+.flip-card {
+    background-color: transparent;
+    height: 350px;
+    width: 25%;
+    perspective: 1000px;
+    /* Remover caso não queira o efeito 3d */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Gira o card */
+.flip {
+    transform: rotateY(180deg);
+}
+
+/* Posição do card de frente e verso */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Verso do card */
+.flip-card-back {
+    background-color: #0d1c4a;
+    color: white;
+    border-radius: 20px;
+    transform: rotateY(180deg);
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.iniciar {
+    padding: 10px;
+    background-color: #20346f;
+    border: 0px;
+    border-radius: 10px;
+}
+
+.iniciar a {
+    color: white;
+    font-size: 14pt;
+    text-decoration-line: none;
+}
+
+.iniciar:hover {
+    transform: scale(1.2);
+}
+
+@media (min-width: 200px) and (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .cards-quiz {
+        width: 100%;
+    }
+
+    .flip-card {
+        margin-bottom: 80px;
+        width: 100%;
+    }
+}

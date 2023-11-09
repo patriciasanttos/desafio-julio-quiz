@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Imagens/img-header.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+
+    <title>Quiz</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="voltar"> <a href="/index.html">👈 Voltar</a></h1>
+    </header>
+    
+    <section id="quiz">
+        <h1>Quiz de Filmes</h1>
+        <div id="quadro-quiz"></div>
+    </section>
+
+    <script>
+        let perguntas = [
+            {
+                questao:
+                    'Qual é o primeiro filme da trilogia "O Senhor dos Anéis"?',
+                alternativas: ["A: As Duas Torres", "B: O Retorno do Rei", "C: A Sociedade do Anel ", "D: O Hobbit"],
+                alternativaCorreta: 2,
+                alternativaSelecionada: null
+            },
+            {
+                questao: 'Qual filme é baseado na história de um hacker chamado Neo que luta contra uma inteligência artificial?',
+                alternativas: [
+                    "A: Blade Runner",
+                    "B: Minority Report",
+                    "C: Vingadores",
+                    "D: Matrix",
+                ],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+            {
+                questao: 'Quem dirigiu o filme "Pulp Fiction"?',
+                alternativas: [
+                    "A: Quentin Tarantino",
+                    "B: Martin Scorsese",
+                    "C: Steven Spielberg",
+                    "D: Christopher Nolan",
+                ],
+                alternativaCorreta: 0,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    "Qual é o filme sobre um grupo de assaltantes que planeja roubar um cassino em Las Vegas?",
+                alternativas: [
+                    "A: O Poderoso Chefão",
+                    "B: A Origem",
+                    "C: Onze Homens e um Segredo",
+                    "D: La Casa de Papel",
+                ],
+                alternativaCorreta: 2,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    "Qual filme conta a história de um homem que fica preso em um aeroporto devido a problemas burocráticos?",
+                alternativas: ["A: O Terminal", "B: Voo Noturno", "C: Conair", "D: Náufrago"],
+                alternativaCorreta: 0,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    'Qual filme apresenta a famosa frase "May the Force be with you"?',
+                alternativas: ["A: Jurassic Park", "B: Star Wars", "C: E.T. - O Extraterrestre", "D: Matrix"],
+                alternativaCorreta: 1,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    "Qual filme é baseado em um romance de Stephen King sobre um escritor atormentado que fica isolado em um hotel?",
+                alternativas: ["A: O Iluminado", "B: Psicose", "C: O Sexto Sentido", "D: Silêncio dos Inocentes"],
+                alternativaCorreta: 0,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    "Qual é o nome do planeta natal do Superman?",
+                alternativas: ["A: Asgard", "B: Endor", "C: Tatooine", "D: Krypton"],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    "Quem interpretou o papel de Tony Stark / Homem de Ferro no Universo Cinematográfico Marvel?",
+                alternativas: ["A: Chris Evans", "B: Mark Ruffalo", "C: Robert Downey Jr.", "D: Chris Hemsworth"],
+                alternativaCorreta: 2,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    'Qual filme é conhecido por sua frase "Você pode lidar com a verdade!"?',
+                alternativas: ["A: Um Sonho de Liberdade", "B: Questão de Honra", "C: Tempo de Matar", "D: Gladiador"],
+                alternativaCorreta: 1,
+                alternativaSelecionada: null
+            },
+        ];
+    </script>
+    <script src="/scripts/quiz.js"></script>
+</body>
+
+</html>

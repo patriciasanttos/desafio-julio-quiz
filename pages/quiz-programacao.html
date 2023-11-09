@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Imagens/img-header.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    
+    <title>Quiz</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="voltar"> <a href="/index.html">👈 Voltar</a></h1>
+    </header>
+
+    <section id="quiz">
+        <h1>Quiz de Programação</h1>
+        <div id="quadro-quiz"></div>
+    </section>
+
+    <script>
+        let perguntas = [
+            {
+                questao:
+                    "Qual é a linguagem de programação mais usada para desenvolvimento web?",
+                alternativas: ["A: Java", "B: Python", "C: JavaScript", "D: Ruby"],
+                alternativaCorreta: 2,
+                alternativaSelecionada: null
+            },
+            {
+                questao: 'O que é um loop "for" usado para?',
+                alternativas: [
+                    "A: Manipular strings",
+                    "B: Realizar operações aritméticas",
+                    "C: Criar funções",
+                    "D: Executar um bloco de código várias vezes",
+                ],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+            {
+                questao: 'O que é um "bug" em programação?',
+                alternativas: [
+                    "A: Uma característica desejada do software.",
+                    "B: Um erro ou problema no código que leva a um comportamento indesejado.",
+                    "C: Uma linguagem de programação popular.",
+                    "D: Um recurso de depuração.",
+                ],
+                alternativaCorreta: 1,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    "Qual é a principal função de um sistema de controle de versão, como o Git?",
+                alternativas: [
+                    "A: Gerenciar as versões do sistema operacional.",
+                    "B: Desenvolver interfaces de usuário.",
+                    "C: Realizar análises de dados.",
+                    "D: Rastrear alterações no código-fonte e facilitar o trabalho em equipe.",
+                ],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    "Qual é a linguagem de programação mais amplamente usada para desenvolvimento web?",
+                alternativas: ["A: HTML", "B: Java", "C: Python", "D: C++"],
+                alternativaCorreta: 0,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    "Qual é a linguagem usada para criar consultas em bancos de dados relacionais?",
+                alternativas: ["A: SQL", "B: Java", "C: Python", "D: C++"],
+                alternativaCorreta: 0,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    "Qual dos seguintes não é um conceito importante em React?",
+                alternativas: ["A: Componentes", "B: State", "C: Classes", "D: Props"],
+                alternativaCorreta: 2,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    "Qual elemento HTML é usado para criar um hiperlink?",
+                alternativas: ["A: <link>", "B: <url>", "C: <hyperlink>", "D: <a>"],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    "Qual é o comando Git usado para enviar as alterações locais para um repositório remoto?",
+                alternativas: ["A: git commit", "B: git push", "C: git add", "D: git pull"],
+                alternativaCorreta: 1,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    'O que o comando "npm" é usado para fazer em um projeto Node.js?',
+                alternativas: ["A:  Executar um servidor web", "B: Criar uma nova variável", "C: Instalar pacotes e gerenciar dependências", "D: Compilar código JavaScript"],
+                alternativaCorreta: 2,
+                alternativaSelecionada: null
+            },
+        ];
+    </script>
+    <script src="/scripts/quiz.js"></script>
+</body>
+
+</html>

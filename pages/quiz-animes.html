@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Imagens/img-header.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+
+    <title>Quiz</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="voltar"> <a href="/index.html">👈 Voltar</a></h1>
+    </header>
+
+    <section id="quiz">
+        <h1>Quiz de Animes</h1>
+        <div id="quadro-quiz"></div>
+    </section>
+
+    <script>
+        let perguntas = [
+            {
+                questao:
+                    'Qual é o nome do Shinigami (Deus da Morte) que dá a Light Yagami o Death Note em "Death Note"?',
+                alternativas: ["A: Rem", "B: Misa", "C: Ryuk", "D: L"],
+                alternativaCorreta: 2,
+                alternativaSelecionada: null
+            },
+            {
+                questao: 'Em "Dragon Ball Z", qual é o nome da transformação mais poderosa de Goku?',
+                alternativas: [
+                    "A: Super Saiyajin 1",
+                    "B: Super Saiyajin Blue",
+                    "C: Super Saiyajin 2",
+                    "D: Super Saiyajin 3",
+                ],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+            {
+                questao: 'Quem é o personagem principal de "One Punch Man"?',
+                alternativas: [
+                    "A: Saitama",
+                    "B: Genos",
+                    "C: Speed-o'-Sound Sonic",
+                    "D: Boros",
+                ],
+                alternativaCorreta: 0,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    'Em "Attack on Titan," qual é o nome da cidade cercada por enormes muralhas para se proteger dos Titãs?',
+                alternativas: [
+                    "A: Marley",
+                    "B: Paradis",
+                    "C: Eldia",
+                    "D: Shiganshina",
+                ],
+                alternativaCorreta: 1,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    'Qual é o gênero principal de "Black Clover"?',
+                alternativas: ["A: Ficção Científica", "B: Romance", "C: Fantasia", "D: Mistério"],
+                alternativaCorreta: 2,
+                alternativaSelecionada: null
+            },
+             {
+                questao:
+                    'Em "Attack on Titan", qual é o nome do personagem que possui a capacidade de se transformar em um Titã Colossal?',
+                alternativas: ["A: Eren Yeager", "B: Armin Arlert", "C:  Reiner Braun", "D: Levi Ackerman"],
+                alternativaCorreta: 2,
+                alternativaSelecionada: null
+            },
+             {
+                questao:
+                    'Em "Naruto", qual é a técnica de assinatura de Kakashi Hatake?',
+                alternativas: ["A: Rasengan", "B: Chidori", "C: Sharingan", "D: Kamui"],
+                alternativaCorreta: 1,
+                alternativaSelecionada: null
+            },
+             {
+                questao:
+                    'Qual é o nome do protagonista de "Demon Slayer"?',
+                alternativas: ["A: Tanjiro Kamado", "B: Zenitsu Agatsuma", "C: Inosuke Hashibira", "D: Kyojuro Rengoku"],
+                alternativaCorreta: 0,
+                alternativaSelecionada: null
+            },
+             {
+                questao:
+                    'Qual é o nome da organização que luta contra os Hollows em "Bleach"?',
+                alternativas: ["A: Espada", "B: Arrancar", "C: Soul Society", "D: Gotei 13"],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+             {
+                questao:
+                    'Em "One Piece", qual é o nome do capitão dos Piratas do Chapéu de Palha?',
+                alternativas: ["A: Zoro", "B: Nami", "C: Luffy", "D: Sanji"],
+                alternativaCorreta: 2,
+                alternativaSelecionada: null
+            },
+        ];
+    </script>
+    <script src="/scripts/quiz.js"></script>
+</body>
+
+</html>

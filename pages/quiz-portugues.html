@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Imagens/img-header.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+
+    <title>Quiz</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="voltar"> <a href="/index.html">👈 Voltar</a></h1>
+    </header>
+
+    <section id="quiz">
+        <h1>Quiz de Português</h1>
+        <div id="quadro-quiz"></div>
+    </section>
+
+    <script>
+        let perguntas = [
+            {
+                questao:
+                    'Qual é o plural de "país"(nação)?',
+                alternativas: ["A: Paises", "B: Páises", "C: Países", "D: Pais"],
+                alternativaCorreta: 2,
+                alternativaSelecionada: null
+            },
+            {
+                questao: 'O que é um ditongo?',
+                alternativas: [
+                    "A: Uma letra do alfabeto",
+                    "B: Um encontro de três vogais",
+                    "C: Um tipo de acento gráfico",
+                    "D: Uma sequência de duas vogais na mesma sílaba",
+                ],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+            {
+                questao: 'Qual é a classe gramatical da palavra "sempre"?',
+                alternativas: [
+                    "A: Substantivo",
+                    "B: Advérbio",
+                    "C: Adjetivo",
+                    "D: Verbo",
+                ],
+                alternativaCorreta: 1,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    'Qual é a conjugação correta do verbo "ler" na primeira pessoa do singular do presente do indicativo?',
+                alternativas: [
+                    "A: Lê", "B: Leio", "C: Lemos", "D: Li"],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+            {
+                questao:
+                    'Qual é o plural de "cidadão"?',
+                alternativas: ["A: Cidadãos", "B: Cidadões", "C: Cidadães", "D: Cidadonhos"],
+                alternativaCorreta: 0,
+                alternativaSelecionada: null
+            },
+             {
+                questao:
+                    'Qual é a função da preposição?',
+                alternativas: ["A: Conectar palavras de mesma classe.", "B: Conectar palavras de classes diferentes.", "C:  Substituir verbos em uma frase.", "D: Introduzir o sujeito da oração."],
+                alternativaCorreta: 1,
+                alternativaSelecionada: null
+            },
+             {
+                questao:
+                    'Qual é o antônimo de "alegre"?',
+                alternativas: ["A: Feliz", "B: Radiante", "C: Contente", "D: Triste"],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+             {
+                questao:
+                    'Qual é a função do ponto e vírgula na língua portuguesa?',
+                alternativas: ["A: Separar orações coordenadas.", "B: Separar elementos de uma lista.", "C: Indicar uma pergunta.", "D: Encerrar uma frase."],
+                alternativaCorreta: 1,
+                alternativaSelecionada: null
+            },
+             {
+                questao:
+                    'Qual é o feminino de "cavalheiro"?',
+                alternativas: ["A: Dama", "B: Cavalheira", "C: Damsel", "D: Cavaleira"],
+                alternativaCorreta: 0,
+                alternativaSelecionada: null
+            },
+             {
+                questao:
+                    'Qual é o plural de "cão"?',
+                alternativas: ["A: Cãos", "B: Cãoes", "C: Cãas", "D: Cães"],
+                alternativaCorreta: 3,
+                alternativaSelecionada: null
+            },
+        ];
+    </script>
+    <script src="/scripts/quiz.js"></script>
+</body>
+
+</html>
