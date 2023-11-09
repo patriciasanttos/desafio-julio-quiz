@@ -1,6 +1,24 @@
 let respondida = false;
 let perguntaAtual = 0;
 
+function filtrarPerguntas() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const quantidade = urlParams.get('q');
+
+  if (quantidade && quantidade <= 10) {
+    let listaFiltrada = []
+
+    while(listaFiltrada.length < quantidade) {
+      const pergunta = perguntas[Math.floor(Math.random() * perguntas.length)];
+      if (listaFiltrada.indexOf(pergunta) == -1) {
+        listaFiltrada.push(pergunta)
+      }
+    }
+    
+    perguntas = [...listaFiltrada]
+  }
+}
+
 function mostrarResultados() {
   // Limpa a div do quadro-quiz
   let quadroQuiz = document.getElementById("quadro-quiz");
@@ -162,7 +180,7 @@ function perguntasNoHtml(numeroQuestao) {
   // Titulo da questão
   let h2 = document.createElement("h2");
   h2.setAttribute("id", "pergunta");
-  h2.textContent = perguntas[numeroQuestao].questao;
+  h2.textContent = (perguntaAtual + 1) + ' - ' + perguntas[numeroQuestao].questao;
   quadroQuiz.appendChild(h2);
 
   let divQuestoes = document.createElement("div");
@@ -201,5 +219,10 @@ function perguntasNoHtml(numeroQuestao) {
   quadroQuiz.setAttribute('class', 'animate__animated animate__fadeInRight')
 }
 
+// filtrar perguntas pela querystring "q"
+filtrarPerguntas();
+
 // Começar mostrando a primeira pergunta (perguntaAtual: 0)
 perguntasNoHtml(perguntaAtual);
+
+
