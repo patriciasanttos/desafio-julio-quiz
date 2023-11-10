@@ -27,9 +27,24 @@ function mostrarResultados() {
   quadroQuiz.setAttribute('class', 'animate__animated animate__backInUp')
 
   // Titulo
+  let divHeader = document.createElement("div");
+  divHeader.setAttribute("class", "flex-row");
+
   let h2 = document.createElement("h2");
   h2.textContent = "Resultado";
-  quadroQuiz.appendChild(h2);
+  divHeader.appendChild(h2);
+
+  let divResultado = document.createElement("div");
+  divResultado.setAttribute("id", "titulo-resultado");
+  divHeader.appendChild(divResultado);
+
+  quadroQuiz.appendChild(divHeader);
+
+  let divScore = document.createElement("div");
+  quadroQuiz.appendChild(divScore);
+
+  let acertos = 0
+  let erros = 0
 
   for (let i = 0; i < perguntas.length; i++) {
     const pergunta = perguntas[i];
@@ -37,6 +52,12 @@ function mostrarResultados() {
     let div = document.createElement("div");
     let ul = document.createElement("ul");
     let acertou = pergunta.alternativaCorreta == pergunta.alternativaSelecionada
+
+    if (acertou) {
+      acertos++
+    } else {
+      erros++
+    }
 
     let h3 = document.createElement("h3");
     h3.textContent = (acertou ? `✅ ` : `❌ `) + pergunta.questao;
@@ -70,20 +91,28 @@ function mostrarResultados() {
       li.setAttribute("class", classes);
       ul.appendChild(li);
     }
+    
     div.appendChild(ul);
-
     quadroQuiz.appendChild(div);
   }
+
+  document.getElementById('titulo-resultado').innerHTML += `${acertos} ✅    ❌ ${erros}`;
 
   let divResposta = document.createElement("div");
   divResposta.setAttribute("id", "resposta");
 
-  let button = document.createElement("button");
-  button.setAttribute("id", "responder");
-  button.addEventListener("click", () => (window.location = "/"));
-  button.textContent = "Voltar";
+  let buttonRedo = document.createElement("button");
+  buttonRedo.setAttribute("id", "responder");
+  buttonRedo.addEventListener("click", () => onClickRedo());
+  buttonRedo.textContent = "Refazer Quiz";
 
-  divResposta.appendChild(button);
+  let buttonBack = document.createElement("button");
+  buttonBack.setAttribute("id", "responder");
+  buttonBack.addEventListener("click", () => (window.location = "/"));
+  buttonBack.textContent = "Voltar";
+
+  divResposta.appendChild(buttonRedo);
+  divResposta.appendChild(buttonBack);
   quadroQuiz.appendChild(divResposta);
 }
 
@@ -102,8 +131,18 @@ function onClickProximo() {
       mostrarResultados();
     }
   }, 400)
+}
 
- 
+function onClickRedo () {
+  perguntaAtual = 0;
+  respondida = false;
+  
+  let quadroQuiz = document.getElementById("quadro-quiz");
+  quadroQuiz.setAttribute('class', 'animate__animated animate__backOutDown')
+
+  setTimeout(() => {
+    perguntasNoHtml(perguntaAtual);
+  }, 400)
 }
 
 function onClickResponder(numeroQuestao) {

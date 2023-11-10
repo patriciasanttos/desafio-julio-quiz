@@ -11,3 +11,10 @@ body {
 h2 {
     font-weight: 300 !important;
 }
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
